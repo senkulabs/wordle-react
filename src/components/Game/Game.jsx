@@ -11,11 +11,6 @@ const answer = sample(WORDS);
 // Make debugging easier
 console.info({ answer });
 
-
-// If guess < 6 and/or user incorrect answer the guess then game still running
-// If guess < 6 and user correct answer the guess then game is over (win), guess input disabled
-// If guess = 6 and user incorrect answer the guess then game is over (lose), guess input disabled
-// If guess = 6 and user correct answer the guess then game is over (win), guess input disabled
 function Game() {
     // running | win | lose
     const [gameStatus, setGameStatus] = useState('running');
@@ -40,7 +35,6 @@ function Game() {
 
     return (
         <>
-            <p>Put a game here!</p>
             <GuessResults guesses={guesses} />
             <GuessInput gameStatus={gameStatus} handleGuessInput={handleGuessInput} />
             { gameStatus === 'win' && (
