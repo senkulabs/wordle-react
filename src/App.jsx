@@ -1,5 +1,5 @@
-import Game from "./components/Game/Game"
-import Header from "./components/Header/Header"
+import Game from "./components/Game"
+import Header from "./components/Header"
 
 function App() {
   return (

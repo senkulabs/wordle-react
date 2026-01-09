@@ -1,5 +1,5 @@
-import { NUM_OF_LETTER_ALLOWED } from "../../constants";
-import { range } from "../../utils";
+import { NUM_OF_LETTER_ALLOWED } from "../constants";
+import { range } from "../utils";
 
 function Guess({ guess }) {
     return (
