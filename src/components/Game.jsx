@@ -17,19 +17,19 @@ function Game() {
     const [guesses, setGuesses] = useState([]);
 
     function handleGuessInput(guess) {
+        if (guess === answer) {
+            setGameStatus('win');
+        } 
         const updatedGuess = checkGuess(guess, answer);
         const updatedGuesses = [...guesses, updatedGuess];
-        if (updatedGuess.length === NUM_OF_GUESSES_ALLOWED) {
+        if (updatedGuesses.length === NUM_OF_GUESSES_ALLOWED) {
             if (guess === answer) {
                 setGameStatus('win');
             } else {
                 setGameStatus('lose');
             }
-        } else {
-            if (guess === answer) {
-                setGameStatus('win');
-            }
         }
+
         setGuesses(updatedGuesses);
     }
 
